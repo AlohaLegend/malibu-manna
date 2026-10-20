@@ -1,3 +1,24 @@
+const ovenIntro = document.querySelector('[data-oven-intro]');
+const ovenSkip = document.querySelector('[data-oven-skip]');
+
+const finishOvenIntro = () => {
+  document.body.classList.remove('intro-active');
+  ovenIntro?.remove();
+};
+
+if (ovenIntro) {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    finishOvenIntro();
+  } else {
+    window.requestAnimationFrame(() => ovenIntro.classList.add('is-opening'));
+    window.setTimeout(finishOvenIntro, 2400);
+    ovenSkip?.addEventListener('click', finishOvenIntro);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') finishOvenIntro();
+    }, { once: true });
+  }
+}
+
 const header = document.querySelector('[data-header]');
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.site-nav');

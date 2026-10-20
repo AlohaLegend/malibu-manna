@@ -14,11 +14,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=4">
-  <script defer src="script.js?v=4"></script>
+  <link rel="stylesheet" href="styles.css?v=5">
+  <script defer src="script.js?v=5"></script>
 </head>
-<body>
+<body class="intro-active">
   <a class="skip-link" href="#main">Skip to the bakery</a>
+
+  <div class="oven-intro" data-oven-intro>
+    <div class="oven-warmth" aria-hidden="true"></div>
+    <div class="oven-welcome" aria-hidden="true">
+      <span>Malibu Manna</span>
+      <small>something warm is waiting</small>
+    </div>
+    <div class="oven-door" aria-hidden="true">
+      <div class="oven-handle"></div>
+      <div class="oven-window"><span>fresh from the oven</span></div>
+      <div class="oven-dials"><i></i><i></i><i></i></div>
+    </div>
+    <button class="oven-skip" type="button" data-oven-skip>skip intro</button>
+  </div>
+  <noscript><style>.oven-intro{display:none!important}.intro-active{overflow:auto!important}</style></noscript>
 
   <div class="announcement">
     <span class="announcement-flower" aria-hidden="true">✿</span>
@@ -153,6 +168,27 @@
       </aside>
     </section>
 
+    <section class="kitchen-roll" aria-labelledby="kitchen-roll-title">
+      <div class="kitchen-roll-heading reveal">
+        <p class="eyebrow center"><span></span> straight from anna’s camera <span></span></p>
+        <h2 id="kitchen-roll-title">A little peek at what’s baking.</h2>
+      </div>
+      <div class="kitchen-roll-grid">
+        <figure class="kitchen-photo reveal">
+          <div><img src="assets/anna-garden-loaf.webp" width="1350" height="1800" loading="lazy" alt="Anna’s hand-scored sourdough loaf in a sunny Malibu garden"></div>
+          <figcaption>garden light, fresh crust</figcaption>
+        </figure>
+        <figure class="kitchen-photo reveal" data-delay="1">
+          <div><img src="assets/anna-berry-muffins.webp" width="1350" height="1800" loading="lazy" alt="A batch of Anna’s berry muffins outdoors"></div>
+          <figcaption>the sweet bake</figcaption>
+        </figure>
+        <figure class="kitchen-photo reveal" data-delay="2">
+          <div><img src="assets/anna-bread-board.webp" width="1800" height="1350" loading="lazy" alt="Three freshly baked Malibu Manna sourdough loaves on a wooden board"></div>
+          <figcaption>one bake, three personalities</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section class="bread-lab section-pad" id="bread-lab" aria-labelledby="bread-lab-title">
       <div class="lab-intro reveal">
         <p class="script-kicker">make your mark</p>
@@ -163,7 +199,7 @@
           <button class="score-choice" type="button" data-score="sun" aria-pressed="false"><span>sun</span></button>
           <button class="score-choice" type="button" data-score="wheat" aria-pressed="false"><span>wheat</span></button>
           <button class="score-choice" type="button" data-score="crosshatch" aria-pressed="false"><span>woven</span></button>
-          <button class="score-choice draw-choice" type="button" data-score="custom" aria-pressed="false"><span>draw your own</span></button>
+          <button class="score-choice draw-choice" type="button" data-score="custom" aria-pressed="false"><span>custom</span></button>
         </div>
         <p class="lab-note">Have a scoring request for a future loaf? Screenshot your design and send it to <a href="https://www.instagram.com/malibu.manna/" target="_blank" rel="noreferrer">@malibu.manna</a>.</p>
       </div>
