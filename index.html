@@ -37,6 +37,7 @@
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Main navigation">
       <a href="#bakes">the bakes</a>
+      <a href="#bread-lab">bread lab</a>
       <a href="#story">our story</a>
       <a href="#how-to-order">how to order</a>
       <a class="nav-order" href="https://www.instagram.com/malibu.manna/" target="_blank" rel="noreferrer">order on instagram <span aria-hidden="true">↗</span></a>
@@ -46,7 +47,7 @@
   <main id="main">
     <section class="hero" id="top">
       <div class="hero-copy reveal">
-        <p class="eyebrow"><span></span> a home bakery by the sea</p>
+        <p class="eyebrow"><span></span> “give us this day our daily bread” · matthew 6:11</p>
         <h1>A little Malibu <em>sunshine,</em><br>baked into every loaf.</h1>
         <p class="hero-intro">Naturally leavened sourdough and seasonal treats, mixed by hand, fermented slowly, and baked in small batches from our home kitchen.</p>
         <div class="hero-actions">
@@ -80,7 +81,7 @@
         <p>Crackly crust, a tender open crumb, and the kind of aroma that gathers everyone in the kitchen. Malibu Manna is a tiny home bakery inspired by coastal mornings, garden flowers, and the simple magic of sharing something warm.</p>
         <div class="signature">
           <span>from our kitchen to yours,</span>
-          <strong>Malibu Manna</strong>
+          <strong>Anna P</strong>
         </div>
       </div>
       <div class="welcome-details" aria-label="What makes our bread special">
@@ -133,21 +134,118 @@
         <p><strong>Good to know:</strong> everything is made in limited quantities. Preordering is the best way to make sure a loaf has your name on it.</p>
         <a href="https://www.instagram.com/malibu.manna/" target="_blank" rel="noreferrer">view this week’s menu</a>
       </div>
+
+      <aside class="starter-pack reveal" aria-labelledby="starter-title">
+        <div class="starter-jar" aria-hidden="true">
+          <span class="jar-lid"></span>
+          <span class="jar-bubbles b1"></span><span class="jar-bubbles b2"></span><span class="jar-bubbles b3"></span>
+          <b>manna<br>starter</b>
+        </div>
+        <div class="starter-copy">
+          <p class="eyebrow"><span></span> for the home baker</p>
+          <h3 id="starter-title">Bring a little Manna into your kitchen.</h3>
+          <p>A starter pack is in the works with 30g of active sourdough starter, simple care instructions, and Anna’s practical tips for getting your first loaf into the oven.</p>
+          <div class="starter-actions">
+            <a class="button button-outline" href="https://www.instagram.com/malibu.manna/" target="_blank" rel="noreferrer">tell us you’re interested <span aria-hidden="true">↗</span></a>
+            <small>Coming soon. Final availability follows product and label approval.</small>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="bread-lab section-pad" id="bread-lab" aria-labelledby="bread-lab-title">
+      <div class="lab-intro reveal">
+        <p class="script-kicker">make your mark</p>
+        <h2 id="bread-lab-title">The scoring studio</h2>
+        <p>Before a loaf goes into the oven, a few careful cuts guide the way it opens. Choose a favorite pattern or sketch one of your own.</p>
+        <div class="score-picker" role="group" aria-label="Choose a sourdough scoring pattern">
+          <button class="score-choice active" type="button" data-score="leaf" aria-pressed="true"><span>leaf</span></button>
+          <button class="score-choice" type="button" data-score="sun" aria-pressed="false"><span>sun</span></button>
+          <button class="score-choice" type="button" data-score="wheat" aria-pressed="false"><span>wheat</span></button>
+          <button class="score-choice" type="button" data-score="crosshatch" aria-pressed="false"><span>woven</span></button>
+          <button class="score-choice draw-choice" type="button" data-score="custom" aria-pressed="false"><span>draw your own</span></button>
+        </div>
+        <p class="lab-note">Have a scoring request for a future loaf? Screenshot your design and send it to <a href="https://www.instagram.com/malibu.manna/" target="_blank" rel="noreferrer">@malibu.manna</a>.</p>
+      </div>
+
+      <div class="score-workbench reveal" data-delay="1">
+        <div class="loaf-preview" data-loaf-preview>
+          <svg viewBox="0 0 420 420" role="img" aria-label="Preview of the selected bread scoring pattern">
+            <defs>
+              <radialGradient id="loafFill" cx="42%" cy="34%" r="68%"><stop offset="0" stop-color="#e8b96e"/><stop offset=".72" stop-color="#bc7638"/><stop offset="1" stop-color="#875027"/></radialGradient>
+              <filter id="grain"><feTurbulence baseFrequency=".62" numOctaves="2" seed="7" result="n"/><feComposite in="n" in2="SourceGraphic" operator="in" result="t"/><feBlend in="SourceGraphic" in2="t" mode="multiply"/></filter>
+            </defs>
+            <circle cx="210" cy="210" r="178" fill="url(#loafFill)" filter="url(#grain)"/>
+            <circle cx="210" cy="210" r="170" fill="none" stroke="#f5d99b" stroke-width="3" opacity=".45"/>
+            <g class="score-lines" data-score-lines fill="none" stroke="#fae6b7" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M150 302C178 257 207 212 264 125"/>
+              <path d="M173 266l-34-2M188 242l-37-18M203 219l-31-29M218 196l-20-34M234 172l-7-37M179 272l31 14M195 246l37 7M210 221l37-4M226 197l34-17M241 174l28-28"/>
+            </g>
+          </svg>
+          <canvas id="scoring-canvas" width="600" height="600" aria-label="Draw a custom bread scoring pattern"></canvas>
+          <button class="clear-drawing" type="button" data-clear-drawing>clear drawing</button>
+        </div>
+        <div class="bench-caption">
+          <span data-score-name>leaf score</span>
+          <i>every loaf opens differently</i>
+        </div>
+      </div>
     </section>
 
     <section class="process" aria-labelledby="process-title">
       <div class="process-photo" role="img" aria-label="Close view of a hand-scored sourdough loaf"></div>
       <div class="process-content">
-        <p class="script-kicker">slow is the secret</p>
+        <p class="script-kicker">one loaf, 24+ hours</p>
         <h2 id="process-title">A loaf takes its sweet time.</h2>
-        <p class="process-lede">No shortcuts, no rushing. Just flour, water, salt, a lively starter, and the patience to let every loaf become itself.</p>
-        <ol class="process-list">
-          <li><span>01</span><div><h3>Mix by hand</h3><p>Simple ingredients come together in small, carefully watched batches.</p></div></li>
-          <li><span>02</span><div><h3>Rest & rise</h3><p>A long fermentation builds flavor and that signature sourdough texture.</p></div></li>
-          <li><span>03</span><div><h3>Shape with care</h3><p>Each loaf is shaped and scored by hand, so no two are exactly alike.</p></div></li>
-          <li><span>04</span><div><h3>Bake until golden</h3><p>Then it cools just long enough before making its way to you.</p></div></li>
+        <p class="process-lede">Most of the work happens long before the oven turns on. Every stage leaves its mark on the final crust, crumb, and flavor.</p>
+        <ol class="process-timeline">
+          <li><span class="time-mark">day 1</span><div><h3>Feed the starter</h3><p>Wake up the culture and wait for it to become active and bubbly.</p></div></li>
+          <li><span class="time-mark">mix</span><div><h3>Bring the dough together</h3><p>Flour, water, salt, and starter become one shaggy dough.</p></div></li>
+          <li><span class="time-mark">fold</span><div><h3>Build strength</h3><p>Gentle folds develop structure without knocking out the life inside.</p></div></li>
+          <li><span class="time-mark">bulk</span><div><h3>Let it rise</h3><p>Time and temperature guide fermentation until the dough is ready.</p></div></li>
+          <li><span class="time-mark">overnight</span><div><h3>Cold rest</h3><p>The refrigerator slows everything down while flavor keeps developing.</p></div></li>
+          <li><span class="time-mark">day 2</span><div><h3>Heat and score</h3><p>The oven and Dutch oven preheat while the cold loaf gets its final design.</p></div></li>
+          <li><span class="time-mark">22 min</span><div><h3>Lid on</h3><p>Trapped steam helps the loaf expand and the crust begin to form.</p></div></li>
+          <li><span class="time-mark">22 min</span><div><h3>Lid off</h3><p>Open heat brings out the deep golden color and crackly crust.</p></div></li>
+          <li><span class="time-mark">1 hour</span><div><h3>The hardest wait</h3><p>Cooling sets the crumb. Cutting too soon lets all that precious steam escape.</p></div></li>
         </ol>
       </div>
+    </section>
+
+    <section class="science section-pad" aria-labelledby="science-title">
+      <div class="science-heading reveal">
+        <p class="eyebrow center"><span></span> science behind the slice <span></span></p>
+        <h2 id="science-title">A living process.<br>A very thoughtful loaf.</h2>
+        <p>Fermentation changes dough in fascinating ways. Tap each flour-dusted note to turn it over and see what is happening inside.</p>
+      </div>
+
+      <div class="fact-grid">
+        <details class="fact-card reveal">
+          <summary class="fact-face fact-front"><i>01</i><b>Every starter has its own personality.</b><em>open for the science</em></summary>
+          <div class="fact-face fact-back"><b>A tiny ecosystem</b><span>Starters contain different communities of yeasts and bacteria shaped by flour, feeding habits, and environment.</span><a href="https://pubmed.ncbi.nlm.nih.gov/38328986/" target="_blank" rel="noreferrer">read the research ↗</a></div>
+        </details>
+        <details class="fact-card reveal" data-delay="1">
+          <summary class="fact-face fact-front"><i>02</i><b>Sourdough does not have to taste sour.</b><em>open for the science</em></summary>
+          <div class="fact-face fact-back"><b>Flavor follows fermentation</b><span>Time, temperature, microbes, and the balance of organic acids all help shape a loaf’s final flavor.</span><a href="https://pubmed.ncbi.nlm.nih.gov/34026358/" target="_blank" rel="noreferrer">read the research ↗</a></div>
+        </details>
+        <details class="fact-card reveal" data-delay="2">
+          <summary class="fact-face fact-front"><i>03</i><b>Those beautiful holes have an explanation.</b><em>open for the science</em></summary>
+          <div class="fact-face fact-back"><b>Gas becomes crumb</b><span>Microorganisms release carbon dioxide during fermentation. The dough’s gluten network traps it, helping form an airy interior.</span><a href="https://pubmed.ncbi.nlm.nih.gov/38328986/" target="_blank" rel="noreferrer">read the research ↗</a></div>
+        </details>
+        <details class="fact-card reveal">
+          <summary class="fact-face fact-front"><i>04</i><b>Some fermentations reduce certain FODMAPs.</b><em>open for the nuance</em></summary>
+          <div class="fact-face fact-back"><b>Not every loaf, not every body</b><span>Specific cultures and longer processes can reduce fructans, but results vary. One human trial found lower FODMAPs without better symptom tolerance.</span><a href="https://pubmed.ncbi.nlm.nih.gov/29113045/" target="_blank" rel="noreferrer">read the human study ↗</a></div>
+        </details>
+        <details class="fact-card reveal" data-delay="1">
+          <summary class="fact-face fact-front"><i>05</i><b>Fermentation can break down some phytate.</b><em>open for the science</em></summary>
+          <div class="fact-face fact-back"><b>Mineral availability is still being studied</b><span>Sourdough can reduce phytate and increase mineral solubility. Current human evidence about iron absorption remains inconclusive.</span><a href="https://pubmed.ncbi.nlm.nih.gov/42163962/" target="_blank" rel="noreferrer">read the review ↗</a></div>
+        </details>
+        <details class="fact-card reveal" data-delay="2">
+          <summary class="fact-face fact-front"><i>06</i><b>Some studies see a different glucose response.</b><em>open for the nuance</em></summary>
+          <div class="fact-face fact-back"><b>The evidence is not one-size-fits-all</b><span>A review found smaller post-meal glucose rises versus some controls, but rated the certainty of evidence low to very low.</span><a href="https://pubmed.ncbi.nlm.nih.gov/35943419/" target="_blank" rel="noreferrer">read the review ↗</a></div>
+        </details>
+      </div>
+      <p class="science-disclaimer">Food science, not medical advice. Ingredients, methods, and individual responses differ.</p>
     </section>
 
     <section class="story section-pad" id="story">
@@ -165,6 +263,17 @@
         </div>
         <div class="window-sill"><span></span></div>
         <p>the view from the mixing bowl</p>
+      </div>
+    </section>
+
+    <section class="daily-bread" aria-labelledby="daily-bread-title">
+      <img src="assets/floral-divider.svg" alt="" aria-hidden="true">
+      <div class="daily-bread-inner reveal">
+        <p class="script-kicker">bread has always meant more</p>
+        <blockquote id="daily-bread-title">“Man shall not live by bread alone, but by every word that comes from the mouth of God.”</blockquote>
+        <cite>Matthew 4:4</cite>
+        <p>People were keeping living dough and passing it forward long before commercial baker’s yeast existed. Every starter carries a small piece of that ongoing tradition.</p>
+        <a href="https://www.bbc.com/travel/article/20220711-the-worlds-oldest-sourdough" target="_blank" rel="noreferrer">read about sourdough’s ancient story <span aria-hidden="true">↗</span></a>
       </div>
     </section>
 
@@ -218,6 +327,18 @@
         <details>
           <summary>What about allergies?<span></span></summary>
           <p>Products are made in a home kitchen where common allergens may be present. Please ask about the ingredients in the specific bake before ordering.</p>
+        </details>
+        <details>
+          <summary>Is sourdough gluten-free?<span></span></summary>
+          <p>No. Traditional wheat sourdough still contains gluten and is not appropriate for someone with celiac disease. Please review each product’s ingredient and allergen label before ordering.</p>
+        </details>
+        <details>
+          <summary>Does sourdough contain probiotics?<span></span></summary>
+          <p>The starter contains living microorganisms, but the heat of baking greatly reduces their viability. Finished sourdough bread is not generally considered a source of live probiotics.</p>
+        </details>
+        <details>
+          <summary>Is all sourdough made the same way?<span></span></summary>
+          <p>No. Starters, flour, hydration, time, temperature, and fermentation methods all vary. Some commercial breads also use baker’s yeast or sourdough flavoring rather than relying only on a living starter for their rise.</p>
         </details>
       </div>
     </section>
