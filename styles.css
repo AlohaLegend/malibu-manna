@@ -470,10 +470,10 @@ body.intro-active { overflow: hidden; }
 .draw-choice { border-radius: 0; }
 .lab-note { max-width: 560px; font-size: 11px; color: #cfc0aa; line-height: 1.6; }
 .lab-note a { color: var(--pink-soft); text-underline-offset: 4px; }
-.score-workbench { max-width: 680px; margin-left: auto; }
+.score-workbench { width: min(100%, 680px); max-width: 680px; margin-left: auto; }
 .loaf-preview { aspect-ratio: 1; background: #eadcc5; border-radius: 50% 50% 4px 4px; display: flex; align-items: center; justify-content: center; position: relative; box-shadow: 12px 15px 0 rgba(0,0,0,.13); overflow: hidden; }
 .loaf-preview::before { content: ""; position: absolute; inset: 22px; border: 1px solid rgba(95,61,22,.2); border-radius: inherit; }
-.loaf-preview svg { width: 86%; position: relative; z-index: 1; filter: drop-shadow(0 22px 18px rgba(65,34,11,.24)); }
+.loaf-preview svg { width: 101.5%; height: 101.5%; flex: none; position: relative; z-index: 1; filter: drop-shadow(0 22px 18px rgba(65,34,11,.24)); }
 #scoring-canvas { display: none; width: 86%; height: 86%; border-radius: 50%; position: relative; z-index: 2; background: radial-gradient(circle at 42% 34%, #e8b96e 0, #bc7638 72%, #875027 100%); box-shadow: 0 22px 18px rgba(65,34,11,.24); touch-action: none; cursor: crosshair; }
 .loaf-preview.custom-mode svg { display: none; }
 .loaf-preview.custom-mode #scoring-canvas, .loaf-preview.custom-mode .clear-drawing { display: block; }
