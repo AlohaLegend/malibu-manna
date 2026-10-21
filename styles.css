@@ -392,7 +392,7 @@ body.intro-active { overflow: hidden; }
 .section-heading h2, .faq h2 { margin: 18px 0; font-family: var(--serif); font-size: clamp(42px, 5vw, 72px); color: var(--brown-dark); font-weight: 500; line-height: 1; }
 .section-heading > p:last-child { margin: 0 auto; max-width: 590px; line-height: 1.7; color: #79664c; }
 .bakes { background: var(--cream); }
-.bake-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1320px; margin: 0 auto; align-items: stretch; }
+.bake-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; max-width: 1320px; margin: 0 auto; align-items: stretch; }
 .bake-card { min-height: 530px; padding: 32px 34px 38px; background: rgba(255,253,245,.78); border: 1px solid var(--line); position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform .35s ease, box-shadow .35s ease; }
 .bake-card:nth-child(1) { transform: rotate(-1deg); }
 .bake-card:nth-child(3) { transform: rotate(1.2deg); }
@@ -653,8 +653,8 @@ body.intro-active { overflow: hidden; }
 @keyframes breathe { 0%,100% { transform: scaleY(.7); opacity: .5; } 50% { transform: scaleY(1); opacity: 1; } }
 
 @media (max-width: 1050px) {
-  .site-nav { gap: 18px; }
-  .site-nav a { font-size: 10px; }
+  .site-nav { gap: 14px; }
+  .site-nav a { font-size: 12px; }
   .hero { grid-template-columns: .9fr 1.1fr; gap: 40px; min-height: 800px; }
   .hero h1 { font-size: clamp(50px, 6.7vw, 70px); }
   .hero-frame { aspect-ratio: .75; }
@@ -770,6 +770,7 @@ body.intro-active { overflow: hidden; }
   .process-photo { min-height: 360px; }
   .process-timeline li { grid-template-columns: 52px 1fr; }
   .science-heading { margin-bottom: 34px; }
+  .story-flower { width: 220px; right: -95px; top: 18px; opacity: .36; }
   .story { gap: 55px; }
   .daily-bread { padding-block: 76px 86px; }
   .daily-bread > img { margin-bottom: 30px; }
