@@ -786,9 +786,9 @@ body.intro-active { overflow: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
-  body.intro-active { overflow: hidden; }
-  .oven-intro.reduced-intro .oven-door { display: none; }
-  .oven-intro.reduced-intro .oven-warmth { transform: none; filter: saturate(1); }
-  .oven-intro.reduced-intro .oven-welcome { opacity: 1; transform: none; }
+  .oven-intro.is-opening { animation: ovenIntroFade 4.65s ease forwards !important; }
+  .oven-intro.is-opening .oven-door { animation: ovenDoorOpen 2.65s .65s cubic-bezier(.72,.02,.16,1) forwards !important; }
+  .oven-intro.is-opening .oven-warmth { animation: ovenWarmth 3.1s .72s ease-out forwards !important; }
+  .oven-intro.is-opening .oven-welcome { animation: ovenWelcome 2.35s 1.35s ease-out forwards !important; }
   .reveal { opacity: 1; transform: none; }
 }
