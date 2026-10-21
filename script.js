@@ -7,16 +7,20 @@ const finishOvenIntro = () => {
 };
 
 if (ovenIntro) {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    finishOvenIntro();
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (prefersReducedMotion) {
+    ovenIntro.classList.add('reduced-intro');
+    window.setTimeout(finishOvenIntro, 2300);
   } else {
     window.setTimeout(() => ovenIntro.classList.add('is-opening'), 550);
     window.setTimeout(finishOvenIntro, 5200);
-    ovenSkip?.addEventListener('click', finishOvenIntro);
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') finishOvenIntro();
-    }, { once: true });
   }
+
+  ovenSkip?.addEventListener('click', finishOvenIntro);
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') finishOvenIntro();
+  }, { once: true });
 }
 
 const header = document.querySelector('[data-header]');
