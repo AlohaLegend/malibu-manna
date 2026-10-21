@@ -10,8 +10,8 @@ if (ovenIntro) {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     finishOvenIntro();
   } else {
-    window.requestAnimationFrame(() => ovenIntro.classList.add('is-opening'));
-    window.setTimeout(finishOvenIntro, 2400);
+    window.setTimeout(() => ovenIntro.classList.add('is-opening'), 550);
+    window.setTimeout(finishOvenIntro, 5200);
     ovenSkip?.addEventListener('click', finishOvenIntro);
     document.addEventListener('keydown', (event) => {
       if (event.key === 'Escape') finishOvenIntro();
