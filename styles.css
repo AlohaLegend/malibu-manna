@@ -669,6 +669,7 @@ body.intro-active { overflow: hidden; }
   .oven-handle { left: 8%; right: 8%; }
   .announcement { letter-spacing: .02em; font-size: 14px; }
   .site-header { height: 78px; padding-inline: 22px; }
+  .site-header.scrolled { background: rgba(251,246,232,.98); backdrop-filter: none; }
   .brand > span { font-size: 31px; }
   .menu-toggle { display: block; z-index: 12; }
   .site-nav {
